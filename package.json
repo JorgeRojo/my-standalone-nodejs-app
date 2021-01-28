@@ -1,0 +1,21 @@
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:dependencies": "yarn install --pure-lock",
+    "dist:windows": "nexe -t windows-x64-12.9.1 -o ./dist/winApp.exe",
+    "dist:linux": "nexe -t linux-x64-12.9.1 -o ./dist/linuxApp",
+    "dist:mac": "nexe -t mac-x64-12.9.1 -o ./dist/macApp",
+    "dist": "yarn dist:windows && yarn dist:linux && yarn dist:mac"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nexe": "^4.0.0-beta.17"
+  },
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
